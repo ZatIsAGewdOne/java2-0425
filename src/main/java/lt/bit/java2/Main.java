@@ -53,15 +53,6 @@ public class Main {
         }
     }
 
-    static Properties properties() throws IOException {
-
-        Properties properties = new Properties();
-
-        properties.load(Main.class.getClassLoader().getResourceAsStream("application.properties"));
-
-        return properties;
-    }
-
     static void cmdCreate(int empNo, String firstName, String lastName, String sex, LocalDate hireDate, LocalDate birthDate) throws IOException {
         DataSource dataSource = getHikariDataSource();
 
@@ -138,21 +129,31 @@ public class Main {
     }
 
 
-    static DataSource getDataSource() throws IOException {
+    static Properties properties() throws IOException {
 
-        Properties properties = properties();
+        Properties properties = new Properties();
 
-        String url = properties.getProperty("db.url");
-        String user = properties.getProperty("db.user");
-        String password = properties.getProperty("db.password");
+        properties.load(Main.class.getClassLoader().getResourceAsStream("application.properties"));
 
-        MysqlDataSource mysqlDataSource = new MysqlDataSource();
-        mysqlDataSource.setURL(url);
-        mysqlDataSource.setUser(user);
-        mysqlDataSource.setPassword(password);
-
-        return mysqlDataSource;
+        return properties;
     }
+
+
+//    static DataSource getDataSource() throws IOException {
+//
+//        Properties properties = properties();
+//
+//        String url = properties.getProperty("db.url");
+//        String user = properties.getProperty("db.user");
+//        String password = properties.getProperty("db.password");
+//
+//        MysqlDataSource mysqlDataSource = new MysqlDataSource();
+//        mysqlDataSource.setURL(url);
+//        mysqlDataSource.setUser(user);
+//        mysqlDataSource.setPassword(password);
+//
+//        return mysqlDataSource;
+//    }
 
     static DataSource getHikariDataSource() throws IOException {
 
@@ -224,21 +225,5 @@ public class Main {
         statement.close();
 
         return result;
-    }
-
-    public String method(int x, int y) {
-
-        Result result = new Result(x, y, 0);
-
-        try {
-            result.setZ(x / y);
-
-        } catch (ArithmeticException e) {
-
-            result.setError(e.getMessage());
-        }
-
-        Gson gson = new Gson();
-        return gson.toJson(result);
     }
 }
