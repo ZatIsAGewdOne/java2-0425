@@ -1,4 +1,4 @@
-package lt.bit.java2;
+package lt.bit.java2.db;
 
 import java.time.LocalDate;
 
@@ -14,12 +14,15 @@ public class Employee {
 
     LocalDate hireDate;
 
-    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, LocalDate hireDate) {
+    String gender;
+
+    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, LocalDate hireDate, String gender) {
         this.empNo = empNo;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
         this.hireDate = hireDate;
+        this.gender = gender;
     }
 
     public Integer getEmpNo() {
@@ -62,6 +65,14 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -70,6 +81,7 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", birthDate=" + birthDate +
                 ", hireDate=" + hireDate +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }
