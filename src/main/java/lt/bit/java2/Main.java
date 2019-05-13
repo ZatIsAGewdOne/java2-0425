@@ -4,6 +4,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import lt.bit.java2.db.Employee;
 import lt.bit.java2.db.EmployeeRepository;
+import lt.bit.java2.db.Gender;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -64,7 +65,7 @@ public class Main {
                 LocalDate hireDate = LocalDate.parse(args[5]);
                 LocalDate birthDate = LocalDate.parse(args[6]);
 
-                cmdCreate(new Employee(empNo, firstName, lastName, hireDate, birthDate, sex));
+                cmdCreate(new Employee(empNo, firstName, lastName, hireDate, birthDate, Gender.valueOf(sex)));
             }
 
         } else {

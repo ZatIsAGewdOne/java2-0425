@@ -58,7 +58,7 @@ public class EmployeeRepository {
             statement.setDate(2, Date.valueOf(employee.getBirthDate()));
             statement.setString(3, employee.getFirstName());
             statement.setString(4, employee.getLastName());
-            statement.setString(5, employee.getGender());
+            if (employee.getGender() != null) statement.setString(5, employee.getGender().getValue());
             statement.setDate(6, Date.valueOf(employee.getHireDate()));
 
             statement.execute();
@@ -120,7 +120,7 @@ public class EmployeeRepository {
                         resultSet.getString("last_name"),
                         resultSet.getDate("hire_date").toLocalDate(),
                         resultSet.getDate("birth_date").toLocalDate(),
-                        resultSet.getString("gender"));
+                        Gender.fromValue(resultSet.getString("gender")));
 
                 result.add(employee);
             }

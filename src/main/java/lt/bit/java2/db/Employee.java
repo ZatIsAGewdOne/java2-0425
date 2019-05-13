@@ -1,6 +1,7 @@
 package lt.bit.java2.db;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Employee {
 
@@ -14,9 +15,9 @@ public class Employee {
 
     LocalDate hireDate;
 
-    String gender;
+    Gender gender;
 
-    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, LocalDate hireDate, String gender) {
+    public Employee(Integer empNo, String firstName, String lastName, LocalDate birthDate, LocalDate hireDate, Gender gender) {
         this.empNo = empNo;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,12 +66,30 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(empNo, employee.empNo) &&
+                Objects.equals(firstName, employee.firstName) &&
+                Objects.equals(lastName, employee.lastName) &&
+                Objects.equals(birthDate, employee.birthDate) &&
+                Objects.equals(hireDate, employee.hireDate) &&
+                gender == employee.gender;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(empNo, firstName, lastName, birthDate, hireDate, gender);
     }
 
     @Override
