@@ -65,7 +65,7 @@ public class Main {
                 LocalDate hireDate = LocalDate.parse(args[5]);
                 LocalDate birthDate = LocalDate.parse(args[6]);
 
-                cmdCreate(new Employee(empNo, firstName, lastName, hireDate, birthDate, Gender.valueOf(sex)));
+                cmdCreate(new Employee(empNo, firstName, lastName, birthDate, hireDate, Gender.fromValue(sex)));
             }
 
         } else {

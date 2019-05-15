@@ -118,8 +118,8 @@ public class EmployeeRepository {
                 Employee employee = new Employee(resultSet.getInt("emp_no"),
                         resultSet.getString("first_name"),
                         resultSet.getString("last_name"),
-                        resultSet.getDate("hire_date").toLocalDate(),
                         resultSet.getDate("birth_date").toLocalDate(),
+                        resultSet.getDate("hire_date").toLocalDate(),
                         Gender.fromValue(resultSet.getString("gender")));
 
                 result.add(employee);
