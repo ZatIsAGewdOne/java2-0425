@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="demo.main" target="1.8" />
       <module name="demo.test" target="1.8" />
+      <module name="java2-0425_main" target="1.8" />
+      <module name="java2-0425_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

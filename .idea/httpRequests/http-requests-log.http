@@ -1,0 +1,54 @@
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Content-Encoding: UTF-8
+Accept: application/json
+
+<> 2019-05-16T123231.200.json
+
+###
+
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Content-Encoding: UTF-8
+Accept: application/json
+
+<> 2019-05-16T123120.200.json
+
+###
+
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Content-Encoding: UTF-8
+Accept: application/json
+
+<> 2019-05-16T123048.200.json
+
+###
+
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Content-Encoding: UTF-8
+Accept: application/json
+
+<> 2019-05-16T122223.200.html
+
+###
+
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Content-Encoding: UTF-8
+Accept: application/json
+
+<> 2019-05-16T122138.200.html
+
+###
+
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Accept: application/json
+
+<> 2019-05-16T121940.200.html
+
+###
+
+GET http://localhost:8080/web/labas?name=Žįūčkė
+Accept: application/json
+
+<> 2019-05-16T121437.200.txt
+
+###
+
