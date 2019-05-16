@@ -1,13 +1,10 @@
 package lt.bit.java2.demo;
 
-import sun.jvm.hotspot.runtime.Threads;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
-import java.util.stream.LongStream;
 
 public class ThreadsDemo {
 
@@ -19,15 +16,17 @@ public class ThreadsDemo {
         threadsDemo.testExecutors();
     }
 
+    /*
+     * Testuojam kaip viskas griuna jei keli thread'ai
+     */
     void testCounterInThreads() {
 
+        // Jei ne Collections.synchronizedList - tai viskas sugriutu
         List<Long> list = Collections.synchronizedList(new ArrayList<>());
 
         Counter c = new Counter();
 
-        ExecutorService executor = Executors.newFixedThreadPool(
-                Runtime.getRuntime().availableProcessors()
-        );
+        ExecutorService executor = Executors.newFixedThreadPool(2);
 
         executor.execute(() -> {
             for (int j = 0; j < 1000001; j++) {
@@ -57,7 +56,7 @@ public class ThreadsDemo {
 
     }
 
-    
+
 
     private void runningTime(Runnable runnable) {
         long start = System.nanoTime();
@@ -75,6 +74,10 @@ public class ThreadsDemo {
         return Math.sin(i);
     }
 
+    /*
+     * Testuojam kaip skaiciuoja ilgai trunkancius dalykus.
+     * Pradzioje bandome nuosekliai, o po to su ExecutorService.
+     */
     void testExecutors() {
 
         runningTime(() -> {
@@ -111,20 +114,20 @@ public class ThreadsDemo {
     }
 }
 
-
+// jei ne synchronized - tai gerai neveiktu
 class Counter {
 
-    long counter;
+    private long counter;
 
-    public synchronized void inc() {
+    synchronized void inc() {
         counter++;
     }
 
-    public synchronized void dec() {
+    synchronized void dec() {
         counter--;
     }
 
-    public long getCounter() {
+    long getCounter() {
         return counter;
     }
 }

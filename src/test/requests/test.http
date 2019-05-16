@@ -10,3 +10,9 @@ Content-Encoding: UTF-8
 Accept: application/json
 
 ###
+
+GET http://localhost:8080/web/demo?name=Žįūčkė
+Content-Encoding: UTF-8
+Accept: application/json
+
+###
