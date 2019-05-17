@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
-@WebServlet("/demo")
+@WebServlet("/demo/labas")
 class DemoServlet : HttpServlet() {
 
     override fun doGet(req: HttpServletRequest, resp: HttpServletResponse) {
@@ -15,6 +15,13 @@ class DemoServlet : HttpServlet() {
         val name = req.getParameter("name") ?: "Pasauli"
 
         val printer = resp.writer
-        printer.println("<h1>Labukas ${name} :)</h1>")
+        printer.println("<h1>Labukas ${name} :)</h1> ${abc()}")
     }
 }
+
+fun abc() = "abc"
+
+data class Staff(
+        val id: Int,
+        val name: String
+)

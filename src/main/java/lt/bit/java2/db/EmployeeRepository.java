@@ -22,20 +22,29 @@ public class EmployeeRepository {
         return properties;
     }
 
+    private DataSource dataSource = null;
+
     DataSource getHikariDataSource() throws IOException {
 
-        Properties properties = properties();
+        if (dataSource == null) {
 
-        String url = properties.getProperty("db.url");
-        String user = properties.getProperty("db.user");
-        String password = properties.getProperty("db.password");
+            Properties properties = properties();
 
-        HikariConfig config = new HikariConfig();
-        config.setJdbcUrl(url);
-        config.setUsername(user);
-        config.setPassword(password);
+            String url = properties.getProperty("db.url");
+            String user = properties.getProperty("db.user");
+            String password = properties.getProperty("db.password");
+            String driver = properties.getProperty("db.driver");
 
-        return new HikariDataSource(config);
+            HikariConfig config = new HikariConfig();
+            config.setJdbcUrl(url);
+            config.setUsername(user);
+            config.setPassword(password);
+            config.setDriverClassName(driver);
+
+            dataSource = new HikariDataSource(config);
+        }
+
+        return dataSource;
     }
 
 
@@ -82,11 +91,9 @@ public class EmployeeRepository {
         }
     }
 
-    public List<Employee> list(String name, int pageSize, int pageNumber) throws IOException {
-        if (pageNumber < 1) pageNumber = 1;
+    public List<Employee> list(String name, int pageSize, int offset) throws IOException {
+        if (offset < 0) offset = 0;
         if (pageSize < 5 || pageSize > 100) pageSize = 5;
-
-        int offset = pageSize * (pageNumber - 1);
 
         List<Employee> employees = null;
 
@@ -96,7 +103,6 @@ public class EmployeeRepository {
 
         try {
             connection = dataSource.getConnection();
-
 
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT emp_no, first_name, last_name, hire_date, birth_date, gender " +

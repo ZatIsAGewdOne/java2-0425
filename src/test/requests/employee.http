@@ -5,24 +5,16 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
-GET http://localhost:8080/web/demo/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
+###
+
+GET http://localhost:8080/web/api/employee
 
 ###
 
-GET http://localhost:8080/web/demo/hello?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
+GET http://localhost:8080/web/api/employee?pageSize=5
 
 ###
 
-GET http://localhost:8080/web/demo/hello?name=Jonas
-Content-Encoding: UTF-8
-
-###
-
-GET http://localhost:8080/web/demo/hello?name=Ona
-Content-Encoding: UTF-8
+GET http://localhost:8080/web/api/employee?pageSize=5&offset=1000
 
 ###
