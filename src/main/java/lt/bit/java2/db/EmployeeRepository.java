@@ -13,6 +13,55 @@ import java.util.Properties;
 
 public class EmployeeRepository {
 
+    public Employee get(Integer empNo) throws IOException {
+        DataSource dataSource = DBUtils.getDataSource();
+
+        Connection connection = null;
+
+        try {
+            connection = dataSource.getConnection();
+
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT e.emp_no, first_name, last_name, hire_date, birth_date, gender, from_date, to_date, salary  " +
+                            " FROM employees e left join salaries s on e.emp_no = s.emp_no " +
+                            " WHERE e.emp_no = ?");
+
+            statement.setInt(1, empNo);
+
+            Employee employee = null;
+
+            //TODO - nebaigta - reikia kazkaip nuskaityti Salary info ir sudeti i List<Salary>
+            
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                 employee = new Employee(resultSet.getInt("emp_no"),
+                        resultSet.getString("first_name"),
+                        resultSet.getString("last_name"),
+                        resultSet.getDate("birth_date").toLocalDate(),
+                        resultSet.getDate("hire_date").toLocalDate(),
+                        Gender.fromValue(resultSet.getString("gender")));
+            }
+
+            statement.close();
+
+            connection.close();
+
+            return employee;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+
+        return null;
+    }
+
     public void create(Employee employee) throws IOException {
         DataSource dataSource = DBUtils.getDataSource();
 
