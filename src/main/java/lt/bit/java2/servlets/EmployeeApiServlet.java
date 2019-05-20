@@ -3,11 +3,12 @@ package lt.bit.java2.servlets;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
-import com.fasterxml.jackson.datatype.jsr310.JSR310Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import lt.bit.java2.db.Employee;
+import lt.bit.java2.db.DBUtils;
+import lt.bit.java2.db.entities.Employee;
 import lt.bit.java2.db.EmployeeRepository;
 
+import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,12 +20,10 @@ import java.util.List;
 @WebServlet("/api/employee")
 public class EmployeeApiServlet extends HttpServlet {
 
-    EmployeeRepository employeeRepository;
     ObjectMapper objectMapper;
 
     @Override
     public void init() throws ServletException {
-        employeeRepository = new EmployeeRepository();
         objectMapper = new ObjectMapper()
                 .registerModule(new JavaTimeModule())
                 .registerModule(new Jdk8Module())
@@ -33,24 +32,16 @@ public class EmployeeApiServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String pageSizeParam = req.getParameter("pageSize");
-        String offsetParam = req.getParameter("offset");
 
-        int pageSize = 10;
-        try {
-            pageSize = Integer.parseInt(pageSizeParam);
-        } catch (NumberFormatException e) {}
+        Integer empNo = Integer.parseInt(req.getParameter("emp_no"));
 
-        int offset = 0;
-        try {
-            offset = Integer.parseInt(offsetParam);
-        } catch (NumberFormatException e) {}
+        EntityManager em = DBUtils.getEntityManager();
 
-        List<Employee> employees = employeeRepository.list("", pageSize, offset);
+        Employee employee = em.find(Employee.class, empNo);
 
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
 
-        objectMapper.writeValue(resp.getWriter(), employees);
+        objectMapper.writeValue(resp.getWriter(), employee);
     }
 }

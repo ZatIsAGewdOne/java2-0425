@@ -7,14 +7,6 @@
 
 ###
 
-GET http://localhost:8080/web/api/employee
-
-###
-
-GET http://localhost:8080/web/api/employee?pageSize=5
-
-###
-
-GET http://localhost:8080/web/api/employee?pageSize=5&offset=1000
+GET http://localhost:8080/web/api/employee?emp_no=1
 
 ###

@@ -1,4 +1,4 @@
-package lt.bit.java2.db;
+package lt.bit.java2.db.entities;
 
 import java.time.LocalDate;
 
