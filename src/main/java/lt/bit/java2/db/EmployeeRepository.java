@@ -13,43 +13,8 @@ import java.util.Properties;
 
 public class EmployeeRepository {
 
-    Properties properties() throws IOException {
-
-        Properties properties = new Properties();
-
-        properties.load(Main.class.getClassLoader().getResourceAsStream("application.properties"));
-
-        return properties;
-    }
-
-    private DataSource dataSource = null;
-
-    DataSource getHikariDataSource() throws IOException {
-
-        if (dataSource == null) {
-
-            Properties properties = properties();
-
-            String url = properties.getProperty("db.url");
-            String user = properties.getProperty("db.user");
-            String password = properties.getProperty("db.password");
-            String driver = properties.getProperty("db.driver");
-
-            HikariConfig config = new HikariConfig();
-            config.setJdbcUrl(url);
-            config.setUsername(user);
-            config.setPassword(password);
-            config.setDriverClassName(driver);
-
-            dataSource = new HikariDataSource(config);
-        }
-
-        return dataSource;
-    }
-
-
     public void create(Employee employee) throws IOException {
-        DataSource dataSource = getHikariDataSource();
+        DataSource dataSource = DBUtils.getDataSource();
 
         Connection connection = null;
 
@@ -97,7 +62,7 @@ public class EmployeeRepository {
 
         List<Employee> employees = null;
 
-        DataSource dataSource = getHikariDataSource();
+        DataSource dataSource = DBUtils.getDataSource();
 
         Connection connection = null;
 
