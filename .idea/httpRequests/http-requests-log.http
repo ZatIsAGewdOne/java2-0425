@@ -1,3 +1,253 @@
+GET http://localhost:8080/web/api/employee?emp_no=100000
+
+<> 2019-05-21T123625.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=100000
+
+<> 2019-05-21T123329.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=100000
+
+<> 2019-05-21T123121.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=100000
+
+<> 2019-05-21T122902.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=100000
+
+<> 2019-05-21T121840.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1000000
+
+<> 2019-05-21T121835.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=3
+
+<> 2019-05-21T121826.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=4&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+<> 2019-05-21T115235.200.txt
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+<> 2019-05-21T115219.200.txt
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+<> 2019-05-21T114705.500.html
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=3
+
+<> 2019-05-21T114538.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=3
+
+<> 2019-05-21T114207.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=3
+
+<> 2019-05-21T113815.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/x-www-form-urlencoded
+
+emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=3
+
+<> 2019-05-21T113324.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-21T113228.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-21T103924.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee/1
+
+<> 2019-05-21T103907.404.html
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T041841.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T041558.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T035255.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T034443.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T033459.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T033458.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T033455.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T030820.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T030813.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T030707.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T122726.500.html
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T122444.200.json
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T122431.404.html
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=1
+
+<> 2019-05-20T122427.404.html
+
+###
+
+GET http://localhost:8080/web/api/employee
+
+<> 2019-05-20T122302.200.json
+
+###
+
 GET http://localhost:8080/web/api/employee?pageSize=5&offset=1000
 
 <> 2019-05-17T015000.200.json
@@ -61,158 +311,6 @@ GET http://localhost:8080/web/api/employee
 GET http://localhost:8080/web/api/employee
 
 <> 2019-05-17T012032.500.html
-
-###
-
-GET http://localhost:8080/api/employee
-
-<> 2019-05-17T012009.404.html
-
-###
-
-GET http://localhost:8080/web/demo/hello?name=Ona
-Content-Encoding: UTF-8
-
-<> 2019-05-17T010143.200.html
-
-###
-
-GET http://localhost:8080/web/demo/hello?name=Jonas
-Content-Encoding: UTF-8
-
-<> 2019-05-17T010138.200.html
-
-###
-
-GET http://localhost:8080/web/demo/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-17T010115.200.html
-
-###
-
-GET http://localhost:8080/web/demo/hello?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-17T010110.200.json
-
-###
-
-GET http://localhost:8080/web/demo/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-17T010058.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Ona
-Content-Encoding: UTF-8
-
-<> 2019-05-17T123023.404.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Jonas
-Content-Encoding: UTF-8
-
-<> 2019-05-17T120816.200.html
-
-###
-
-GET http://localhost:8080/web/demo?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-17T120205.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-17T120201.200.json
-
-###
-
-GET http://localhost:8080/web/demo?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-17T120035.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T044340.200.json
-
-###
-
-GET http://localhost:8080/web/demo?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T044328.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T123231.200.json
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T123120.200.json
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T123048.200.json
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T122223.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Content-Encoding: UTF-8
-Accept: application/json
-
-<> 2019-05-16T122138.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Accept: application/json
-
-<> 2019-05-16T121940.200.html
-
-###
-
-GET http://localhost:8080/web/labas?name=Žįūčkė
-Accept: application/json
-
-<> 2019-05-16T121437.200.txt
 
 ###
 

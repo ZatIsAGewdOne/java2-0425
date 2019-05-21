@@ -8,7 +8,13 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Map;
 import java.util.Properties;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class DBUtils {
 
@@ -21,30 +27,6 @@ public class DBUtils {
 
         return properties;
     }
-
-
-//    static public DataSource getDataSource() throws IOException {
-//
-//        if (dataSource == null) {
-//
-//            Properties properties = properties();
-//
-//            String url = properties.getProperty("db.url");
-//            String user = properties.getProperty("db.user");
-//            String password = properties.getProperty("db.password");
-//            String driver = properties.getProperty("db.driver");
-//
-//            HikariConfig config = new HikariConfig();
-//            config.setJdbcUrl(url);
-//            config.setUsername(user);
-//            config.setPassword(password);
-//            config.setDriverClassName(driver);
-//
-//            dataSource = new HikariDataSource(config);
-//        }
-//
-//        return dataSource;
-//    }
 
     static private EntityManagerFactory entityManagerFactory;
 
