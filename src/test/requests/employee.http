@@ -11,9 +11,13 @@ GET http://localhost:8080/web/api/employee?emp_no=100000
 
 ###
 
+GET http://localhost:8080/web/api/employee?emp_no=100000&salary
+
+###
+
 POST http://localhost:8080/web/api/employee
 Content-Type: application/x-www-form-urlencoded
 
-emp_no=4&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+emp_no=5&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
 
 ###

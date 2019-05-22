@@ -1,316 +1,410 @@
+GET http://localhost:8080/web/rest/employee/100000?salaries=true
+
+<> 2019-05-22T022304.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T022302.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/999999
+
+<> 2019-05-22T022259.404.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/999999
+
+<> 2019-05-22T021840.404.json
+
+###
+
+PUT http://localhost:8080/web/rest/employee/7
+Content-Type: application/json
+
+{
+  "firstName": "Petra", "lastName": "Petraitė", "gender": "FEMALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T021748.400.json
+
+###
+
+PUT http://localhost:8080/web/rest/employee/6
+Content-Type: application/json
+
+{
+  "firstName": "Petra", "lastName": "Petraitė", "gender": "FEMALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T021742.200.json
+
+###
+
+PUT http://localhost:8080/web/rest/employee/1
+Content-Type: application/json
+
+{
+  "empNo": 2,
+  "firstName": "Petra", "lastName": "Petraitė", "gender": "FEMALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T021726.400.html
+
+###
+
+PUT http://localhost:8080/web/rest/employee/6
+Content-Type: application/json
+
+{
+  "firstName": "Petra", "lastName": "Petraitė", "gender": "FEMALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T021438.200.json
+
+###
+
+PUT http://localhost:8080/web/rest/employee/6
+Content-Type: application/json
+
+{
+  "firstName": "Petra", "lastName": "Petraitė", "gender": "FEMALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T021127.400.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/6
+
+<> 2019-05-22T021117.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/7
+
+<> 2019-05-22T021058.404.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/7
+
+<> 2019-05-22T015922.404.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/7
+
+<> 2019-05-22T015804.404.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/7
+
+<> 2019-05-22T015634.404.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/6
+
+<> 2019-05-22T015629.200.json
+
+###
+
+POST http://localhost:8080/web/rest/employee
+Content-Type: application/json
+
+{
+  "empNo": 6,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "MALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015618.200.json
+
+###
+
+POST http://localhost:8080/web/rest/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "MALE",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015502.400.json
+
+###
+
+POST http://localhost:8080/web/rest/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015421.400.txt
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015413.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000?salaries=true
+
+<> 2019-05-22T015408.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015335.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015310.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015215.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015214.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T015212.200.json
+
+###
+
+POST http://localhost:8080/web/api/employee
+Content-Type: application/json
+
+{
+  "empNo": 5,
+  "firstName": "Petriukas", "lastName": "Petraitis", "gender": "M",
+  "birthDate": "1999-12-31", "hireDate": "2018-01-01"
+}
+
+<> 2019-05-22T014900.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000?salaries=true
+
+<> 2019-05-22T014642.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000?salaries=1
+
+<> 2019-05-22T014636.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000?salaries=
+
+<> 2019-05-22T014619.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T014616.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T014140.500.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T014101.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T013653.500.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T013403.500.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T013056.404.html
+
+###
+
+GET http://localhost:8080/web/rest
+
+<> 2019-05-22T012741.404.html
+
+###
+
+GET http://localhost:8080/web
+
+<> 2019-05-22T012735.200.html
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T012705.404.html
+
+###
+
 GET http://localhost:8080/web/api/employee?emp_no=100000
 
-<> 2019-05-21T123625.200.json
+<> 2019-05-22T012611.200.json
+
+###
+
+GET http://localhost:8080/web/rest/employee/100000
+
+<> 2019-05-22T012603.404.html
+
+###
+
+GET http://localhost:8080/web/api/employee?emp_no=100000&salary=
+
+<> 2019-05-22T121813.200.json
 
 ###
 
 GET http://localhost:8080/web/api/employee?emp_no=100000
 
-<> 2019-05-21T123329.200.json
+<> 2019-05-22T121811.200.json
 
 ###
 
 GET http://localhost:8080/web/api/employee?emp_no=100000
 
-<> 2019-05-21T123121.200.json
+<> 2019-05-22T120426.200.json
 
 ###
 
 GET http://localhost:8080/web/api/employee?emp_no=100000
 
-<> 2019-05-21T122902.200.json
+<> 2019-05-22T120035.200.json
 
 ###
 
 GET http://localhost:8080/web/api/employee?emp_no=100000
 
-<> 2019-05-21T121840.200.json
+<> 2019-05-22T115702.200.json
 
 ###
 
-GET http://localhost:8080/web/api/employee?emp_no=1000000
+GET http://localhost:8080/web/api/employee?emp_no=10000
 
-<> 2019-05-21T121835.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=3
-
-<> 2019-05-21T121826.200.json
+<> 2019-05-22T115657.200.json
 
 ###
 
 POST http://localhost:8080/web/api/employee
 Content-Type: application/x-www-form-urlencoded
 
-emp_no=4&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+emp_no=5&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
 
-<> 2019-05-21T115235.200.txt
-
-###
-
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
-
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-<> 2019-05-21T115219.200.txt
+<> 2019-05-22T113410.200.json
 
 ###
 
 POST http://localhost:8080/web/api/employee
 Content-Type: application/x-www-form-urlencoded
 
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+emp_no=5&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
 
-<> 2019-05-21T114705.500.html
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=3
-
-<> 2019-05-21T114538.200.json
+<> 2019-05-22T111151.200.json
 
 ###
 
 POST http://localhost:8080/web/api/employee
 Content-Type: application/x-www-form-urlencoded
 
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+emp_no=5&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
+
+<> 2019-05-22T111021.200.json
 
 ###
 
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
+GET http://localhost:8080/web/api/employee?emp_no=5
 
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-###
-
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
-
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=3
-
-<> 2019-05-21T114207.200.json
-
-###
-
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
-
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-###
-
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
-
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-###
-
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
-
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=3
-
-<> 2019-05-21T113815.200.json
-
-###
-
-POST http://localhost:8080/web/api/employee
-Content-Type: application/x-www-form-urlencoded
-
-emp_no=3&first_name=Petriukas&last_name=Petraitis&gender=M&birth_date=1999-12-31&hire_date=2018-01-01
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=3
-
-<> 2019-05-21T113324.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-21T113228.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-21T103924.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee/1
-
-<> 2019-05-21T103907.404.html
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T041841.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T041558.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T035255.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T034443.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T033459.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T033458.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T033455.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T030820.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T030813.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T030707.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T122726.500.html
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T122444.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T122431.404.html
-
-###
-
-GET http://localhost:8080/web/api/employee?emp_no=1
-
-<> 2019-05-20T122427.404.html
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-20T122302.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?pageSize=5&offset=1000
-
-<> 2019-05-17T015000.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee?pageSize=3
-
-<> 2019-05-17T014930.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T014920.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T014841.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T013531.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T013302.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T013214.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T012456.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T012450.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T012430.200.json
-
-###
-
-GET http://localhost:8080/web/api/employee
-
-<> 2019-05-17T012032.500.html
+<> 2019-05-22T111011.200.json
 
 ###
 
