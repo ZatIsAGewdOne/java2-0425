@@ -1,35 +1,34 @@
 package lt.bit.java2.rs;
 
-import lt.bit.java2.db.EmployeeRepository;
-import lt.bit.java2.db.SalaryRepository;
+import lt.bit.java2.db.ProductRepository;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 
 import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
-@ApplicationPath("/rest")
+@ApplicationPath("/api")
 public class App extends ResourceConfig {
 
     public App() {
+        // Nerodome standartiniu Tomcat error'u
         Map<String, Object> properties = new HashMap<>();
         properties.put(ServerProperties.RESPONSE_SET_STATUS_OVER_SEND_ERROR, "true");
         setProperties(properties);
 
-        register(EmployeeService.class);
-        register(SalaryService.class);
-        register(ObjectMapperContextResolver.class);
+//        // registruojame API servisus
+//        register(ObjectMapperContextResolver.class);
+//        register(ProductService.class);
+        packages("lt.bit.java2.rs");
 
+        // registruojame injektinamus objektus
         register(new AbstractBinder() {
             @Override
             protected void configure() {
-                bindAsContract(EmployeeRepository.class);
-                bindAsContract(SalaryRepository.class);
+                bindAsContract(ProductRepository.class);
+                //bindAsContract(OtherRepository.class);
             }
         });
     }

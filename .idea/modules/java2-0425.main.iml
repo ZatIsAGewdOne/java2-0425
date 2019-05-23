@@ -31,7 +31,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="employee-persistence-unit" value="dc812ba6-a3e3-454c-9261-5b8a58f483c4" />
+          <factory-entry name="employee-persistence-unit" value="56cd906b-1ff6-43f8-a155-377ce5a197de" />
         </datasource-mapping>
         <naming-strategy-map>
           <unit-entry name="employee-persistence-unit" />

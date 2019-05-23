@@ -32,7 +32,7 @@ public class DBUtils {
         logger.info("Static Initialization start");
         try {
             threadLocal = new ThreadLocal<>();
-            entityManagerFactory = Persistence.createEntityManagerFactory("employee-persistence-unit");
+            entityManagerFactory = Persistence.createEntityManagerFactory("store-persistence-unit");
 
         } catch (Exception e) {
             e.printStackTrace();
