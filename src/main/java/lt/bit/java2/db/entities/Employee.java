@@ -36,6 +36,6 @@ public class Employee {
     @Column(name = "hire_date", nullable = false)
     private LocalDate hireDate;
 
-    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private Collection<Salary> salaries;
  }

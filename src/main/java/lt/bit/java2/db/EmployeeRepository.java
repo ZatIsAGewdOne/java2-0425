@@ -1,6 +1,7 @@
 package lt.bit.java2.db;
 
 import lt.bit.java2.db.entities.Employee;
+import org.hibernate.Session;
 
 import javax.persistence.EntityGraph;
 import javax.persistence.EntityManager;

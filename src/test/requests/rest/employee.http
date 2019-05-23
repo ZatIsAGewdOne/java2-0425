@@ -51,11 +51,11 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/web/rest/employee/7
+PUT http://localhost:8080/web/rest/employee/9
 Content-Type: application/json
 
 {
-  "firstName": "Petra", "lastName": "Petraitė", "gender": "FEMALE",
+  "firstName": "Petra8", "lastName": "Petraitė", "gender": "FEMALE",
   "birthDate": "1999-12-31", "hireDate": "2018-01-01"
 }
 
